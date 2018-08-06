@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 let mode = 'development';
 
@@ -9,12 +10,14 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   mode,
-  entry: './src/index.js',
+  entry: './src/server.js',
   output: {
-    path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/dist/',
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'server.js',
+    publicPath: '/',
   },
+  target: 'node',
+  externals: nodeExternals,
   module: {
     rules: [
       {
