@@ -10,14 +10,13 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   mode,
-  entry: './src/server.js',
+  entry: './src/server/server.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'server.js',
-    publicPath: '/',
   },
   target: 'node',
-  externals: nodeExternals,
+  externals: nodeExternals(),
   module: {
     rules: [
       {
@@ -29,11 +28,4 @@ module.exports = {
     ],
   },
   resolve: { extensions: ['*', '.js', '.jsx'] },
-  devServer: {
-    contentBase: path.join(__dirname, 'public/'),
-    port: 8000,
-    publicPath: 'http://localhost:8000/dist/',
-    hotOnly: true,
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 };
