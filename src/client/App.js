@@ -1,6 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 import { hot } from 'react-hot-loader';
+import styledNormalize from 'styled-normalize';
+
+injectGlobal`
+  ${styledNormalize}
+`;
 
 const AppContainer = styled.div`
   background-color: green;
