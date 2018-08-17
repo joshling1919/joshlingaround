@@ -5,10 +5,9 @@ import { ServerStyleSheet } from 'styled-components';
 import App from '../client/App';
 import Html from '../client/Html';
 
-const port = 8000;
-const server = express();
+const app = express();
 
-server.get('/', (req, res) => {
+app.get('/', (req, res) => {
   const sheet = new ServerStyleSheet();
   const body = renderToString(sheet.collectStyles(<App />));
   const styles = sheet.getStyleTags();
@@ -23,6 +22,4 @@ server.get('/', (req, res) => {
   );
 });
 
-server.listen(port);
-
-console.log(`Serving at http://localhost:${port}`);
+export default app;
