@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { injectGlobal } from 'styled-components';
+import { hot } from 'react-hot-loader';
 import styledNormalize from 'styled-normalize';
 
 injectGlobal`
@@ -14,7 +15,7 @@ const AppContainer = styled.div`
 const App = () => (
   <AppContainer className="app">
     <h1>
-Josh Ling's portfolio no
+Josh Ling's portfolio
     </h1>
   </AppContainer>
 );

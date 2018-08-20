@@ -12,8 +12,7 @@ const Html = ({ body, styles, title }) => `
       ${styles}
     </head>
     <body>
-      <div id="root">${body}</div>
-      <script src="http://localhost:3001/client.js"></script>
+      ${body}
     </body>
   </html>
 `;
