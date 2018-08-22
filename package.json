@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "node ./dist/server.js"
+    "start": "nodemon ./dist/server.js",
+    "launch": "npm run build && npm start"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.18.3",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5",
@@ -29,5 +31,15 @@
     "react-hot-loader": "^4.3.4",
     "styled-components": "^3.4.2",
     "styled-normalize": "^8.0.0"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src/server/*",
+      "src/client/App.js"
+    ],
+    "events": {
+      "restart": "killall node && npm run launch"
+    },
+    "delay": "2500"
   }
 }
