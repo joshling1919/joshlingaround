@@ -24,3 +24,12 @@ https://medium.com/styled-components/the-simple-guide-to-server-side-rendering-r
 1. Next, I want to figure out reset vs. normalize and how to best accomplish that with styled-components
 
 1. Then, move on to setting up hot reloading and a better development workflow.
+
+1. next step is to attempt to set up frontend hot reloading
+
+1. I was about to set up a client webpack to see if I can get all client stuff
+   running on the dev server independently of SSR related stuff. But then, I came across this article: https://blog.campvanilla.com/react-express-hot-module-reloading-with-webpack-dev-server-5c9c67dcbb5e
+
+1. I'm going to test out this proxy feature.
+
+1. I just got hot reloading going for frontend, but now nodemon is experiencing some issues with restarting the process. I think now is a good time to look at dev middleware or perhaps proxy.

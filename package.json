@@ -6,8 +6,9 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "nodemon ./dist/server.js",
-    "launch": "npm run build && npm start"
+    "launch": "nodemon ./dist/server.js",
+    "dev-server": "webpack-dev-server --config webpack.client.js --hot",
+    "start": "npm run build && npm run launch | npm run dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -35,10 +36,10 @@
   "nodemonConfig": {
     "watch": [
       "src/server/*",
-      "src/client/App.js"
+      "src/client/Html.js"
     ],
     "events": {
-      "restart": "killall node && npm run launch"
+      "restart": "killall node && npm start"
     },
     "delay": "2500"
   }
