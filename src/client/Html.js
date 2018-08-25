@@ -13,7 +13,6 @@ const Html = ({ body, styles, title }) => `
     </head>
     <body>
     <div id="root">${body}</div>
-    <div>heh</div>
     <script src="http://localhost:8080/client-bundle.js/"></script>
     </body>
   </html>

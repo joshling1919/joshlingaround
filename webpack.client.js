@@ -16,6 +16,7 @@ module.exports = {
     publicPath: `http://localhost:${PORT}/`,
     filename: 'client-bundle.js',
   },
+  target: 'web',
   module: {
     rules: [
       {

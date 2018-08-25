@@ -8,7 +8,7 @@
     "build": "webpack",
     "launch": "nodemon ./dist/server.js",
     "dev-server": "webpack-dev-server --config webpack.client.js --hot",
-    "start": "npm run build && npm run launch | npm run dev-server"
+    "start": "concurrently \"npm run build && npm run launch\" \"npm run dev-server\""
   },
   "author": "",
   "license": "ISC",
@@ -39,7 +39,7 @@
       "src/client/Html.js"
     ],
     "events": {
-      "restart": "killall node && npm start"
+      "restart": "ps -ef | grep 'nodemon ./dist/server.js' | grep -v grep | awk '{print $2}' | xargs kill && lsof -i:8000 | grep node | grep -v grep | awk '{print $2}' | xargs kill -9 && npm run build && npm run launch"
     },
     "delay": "2500"
   }

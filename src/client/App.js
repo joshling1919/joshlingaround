@@ -16,7 +16,7 @@ const AppContainer = styled.div`
 const App = () => (
   <AppContainer className="app">
     <h1>
-Josh Ling Portfolio
+Joshua Ling
     </h1>
     <Home />
   </AppContainer>
