@@ -6,6 +6,9 @@ import Home from './components/homepage';
 
 injectGlobal`
   ${styledNormalize}
+  html, body, #root, #root>div {
+    height: 100%;
+  }
 `;
 
 const AppContainer = styled.div`
@@ -15,9 +18,6 @@ const AppContainer = styled.div`
 
 const App = () => (
   <AppContainer className="app">
-    <h1>
-Joshua Ling
-    </h1>
     <Home />
   </AppContainer>
 );
