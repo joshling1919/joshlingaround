@@ -23,6 +23,6 @@ server.get('/', (req, res) => {
   );
 });
 
-server.listen(port);
+server.listen(process.env.PORT || port);
 
 console.log(`Serving at http://localhost:${port}`);
