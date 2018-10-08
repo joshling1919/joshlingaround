@@ -12,7 +12,6 @@ injectGlobal`
 `;
 
 const AppContainer = styled.div`
-  background-color: green;
   box-sizing: border-box;
 `;
 

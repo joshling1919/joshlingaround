@@ -1,8 +1,9 @@
 import React from 'react';
+import Nav from './nav/Nav';
 
 const Home = () => (
   <div>
-hi
+    <Nav />
   </div>
 );
 

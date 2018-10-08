@@ -38,7 +38,9 @@
   "nodemonConfig": {
     "watch": [
       "src/server/*",
-      "src/client/Html.js"
+      "src/client/Html.js",
+      "src/client/App.js",
+      "src/client/index.js"
     ],
     "events": {
       "restart": "ps -ef | grep 'nodemon ./dist/server.js' | grep -v grep | awk '{print $2}' | xargs kill && lsof -i:8000 | grep node | grep -v grep | awk '{print $2}' | xargs kill -9 && npm run build && npm run launch"
