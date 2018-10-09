@@ -16,6 +16,10 @@ import React from 'react';
 // b) resume/professional accomplishments
 // c) personal projects
 
+// inspiration: https://html5up.net/read-only
+// actually love this one: http://demo.themewagon.com/preview/black-n-white-clean-responsive-blog-template
+// https://themewagon.com/
+
 const Nav = () => (
   <nav>
     <a href="#posts">
