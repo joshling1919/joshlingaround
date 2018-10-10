@@ -1,4 +1,26 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Header = styled.header`
+  padding: 25px 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e7e7e7;
+`;
+
+const Nav = () => (
+  <Header>
+    <nav>
+      <a href="#posts">
+Posts
+      </a>
+      <a href="#about">
+About Me
+      </a>
+    </nav>
+  </Header>
+);
+
+export default Nav;
 
 // sections
 // 1. blog: all my blog posts
@@ -19,16 +41,3 @@ import React from 'react';
 // inspiration: https://html5up.net/read-only
 // actually love this one: http://demo.themewagon.com/preview/black-n-white-clean-responsive-blog-template
 // https://themewagon.com/
-
-const Nav = () => (
-  <nav>
-    <a href="#posts">
-Posts
-    </a>
-    <a href="#about">
-About Me
-    </a>
-  </nav>
-);
-
-export default Nav;
