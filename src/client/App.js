@@ -11,9 +11,11 @@ injectGlobal`
     height: 100%;
     box-sizing: border-box;
     font-family: Nunito, sans-serif;
+    font-weight: 300;
   }
   a {
     text-decoration: none;
+    color: inherit;
   }
 `;
 

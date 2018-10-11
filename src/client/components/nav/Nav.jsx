@@ -2,21 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Header = styled.header`
+  display: flex;
+  justify-content: center;
+`;
+
+const Navigation = styled.nav`
   padding: 25px 20px;
   margin-bottom: 40px;
   border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+`;
+
+const NavLink = styled.a`
+  margin-right: 25px;
 `;
 
 const Nav = () => (
   <Header>
-    <nav>
-      <a href="#posts">
+    <Navigation>
+      <NavLink href="#posts">
 Posts
-      </a>
-      <a href="#about">
-About Me
-      </a>
-    </nav>
+      </NavLink>
+      <NavLink href="#about">
+About
+      </NavLink>
+    </Navigation>
   </Header>
 );
 
