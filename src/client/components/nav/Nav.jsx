@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Header = styled.header`
   display: flex;
@@ -15,17 +16,17 @@ const Navigation = styled.nav`
   width: 90%;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   margin-right: 25px;
 `;
 
 const Nav = () => (
   <Header>
     <Navigation>
-      <NavLink href="#posts">
+      <NavLink to="/">
 Posts
       </NavLink>
-      <NavLink href="#about">
+      <NavLink to="/about">
 About
       </NavLink>
     </Navigation>

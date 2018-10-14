@@ -15,7 +15,7 @@ const PostsContainer = styled.div`
 const Posts = () => (
   <PostsContainer>
     {POSTS.map(post => (
-      <div>
+      <div key={post}>
         {post}
       </div>
     ))}
