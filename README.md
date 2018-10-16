@@ -17,6 +17,4 @@ To do:
 
 Where I left off:
 
-1.  currently just trying to get webpack to build while following this tutorial:
-
-https://medium.com/styled-components/the-simple-guide-to-server-side-rendering-react-with-styled-components-d31c6b2b8fbf
+1. https://tylermcginnis.com/react-router-server-rendering/

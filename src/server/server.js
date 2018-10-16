@@ -2,7 +2,7 @@ import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
-import App from '../client/App';
+import App from '../shared/App';
 import Html from '../client/Html';
 
 const port = 8000;

@@ -2,7 +2,7 @@ import React from 'react';
 import { injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 import { hot } from 'react-hot-loader';
-import Home from './components/homepage';
+import Home from '../client/components/Home';
 
 // eslint-disable-next-line
 injectGlobal`

@@ -10,13 +10,13 @@ const Body = styled.div`
 `;
 
 const Home = () => (
-  <div>
+  <Router>
     <Nav />
     <Body>
       <Route exact path="/" component={Posts} />
       <Route exact path="/about" component={About} />
     </Body>
-  </div>
+  </Router>
 );
 
 export default Home;

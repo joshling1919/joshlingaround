@@ -41,7 +41,7 @@
     "watch": [
       "src/server/*",
       "src/client/Html.js",
-      "src/client/App.js",
+      "src/shared/App.js",
       "src/client/index.js"
     ],
     "events": {
