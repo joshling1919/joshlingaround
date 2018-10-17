@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Nav from './nav/Nav';
 import Posts from './posts/Posts';
@@ -10,13 +10,13 @@ const Body = styled.div`
 `;
 
 const Home = () => (
-  <Router>
+  <div>
     <Nav />
     <Body>
       <Route exact path="/" component={Posts} />
       <Route exact path="/about" component={About} />
     </Body>
-  </Router>
+  </div>
 );
 
 export default Home;
